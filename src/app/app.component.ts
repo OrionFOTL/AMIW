@@ -25,4 +25,8 @@ export class AppComponent {
     this.thoughts.splice(i, 1);
     this.thoughtsService.saveThoughts(this.thoughts);
   }
+
+  private ngOnInit() {
+    this.thoughts = this.thoughtsService.fetchThoughts();
+  }
 }
