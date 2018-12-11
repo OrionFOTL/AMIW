@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'zlotemysli';
-}// asd
+  public text: String = 'szczerozłota myśl';
+  public thoughts: Array<String> = [];
+
+  public addThought(): void {
+    this.thoughts.push(this.text);
+    console.log(this.thoughts);
+    this.text = '';
+  }
+}
